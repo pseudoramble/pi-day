@@ -19,3 +19,5 @@ or:
     π ≈ 3 + ∑ 4 / (n*n+1*n+2), n = 2 and goes to infinity
 
 The implementation I did is particular slow at larger values, partially at least because it generates the actual full sequence of steps instead of losing that information each step. But it's good enough for a before bed game.
+
+Here's the value it got for `System.Int32.MaxValue` steps (a little over 2.1 billion): `3.1415926535897932384626432850M`. The first 27 digits after the decimal are correct.
