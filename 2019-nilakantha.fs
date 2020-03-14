@@ -1,3 +1,5 @@
+module Nilakanatha
+
 let term n =
   let nF = decimal n;
   let step = 
@@ -11,7 +13,5 @@ let doPi n =
   |> Seq.take n
   |> Seq.sum
 
-// Maybe try a smaller number first
-let iterations = System.Int32.MaxValue;
-
-3.0m + (doPi iterations)
+let run iterations = 
+  3.0m + (doPi iterations)

@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>pi_day</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="2020-chudnovsky.fs" />
+    <Compile Include="2019-nilakantha.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
