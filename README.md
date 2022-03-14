@@ -6,6 +6,30 @@ Pi Day is on March 14th each year, AKA 03-14. Get it? Hah!
 
 Here are some ways to do the Pi.
 
+## 2022 - Digit Distribution
+
+[The code](https://github.com/pseudoramble/pi-day/blob/master/2022-distribution.fs)
+
+I meant to do this in 2021, but I missed it last year due to life. My mistake.
+
+This takes the digits computed with the Chudnovsky algorithm (see 2020 below), and determines the distribution of the digits. Number are reported using a `System.Timer` in .NET 6 on my new-to-me laptop (Linux, i7 10510U CPU, 40GB RAM).
+
+Here's what the first 100k looks like. It took ~20 seconds to get this result.
+
+![First 100k Digit Distribution Chart](https://github.com/pseudoramble/pi-day/blob/master/images/first-100k-digits-distribution.png)
+
+Here's what the first 500k looks like. It took ~560 seconds to get this result.
+
+![First 100k Digit Distribution Chart](https://github.com/pseudoramble/pi-day/blob/master/images/first-500k-digits-distribution.png)
+
+_Note: The code does not generate this chart. That would be awesome, and I hope I remember to add it in a future year when I have a lot more time._
+
+I started 1M a few moments ago. I'm guessing it will be a little bit before I get a result. And I did 10M for a few hours and it never completed. Maybe it would overnight, I'm not sure.
+
+As for the distrubtions, I had assumed that up around 100k digits they would look a bit more uniformly distributed, and 500k would look really close. They're less close than I thought! Not a really weird scale though. Maybe I can run 1M and 10M overnight and see what those look like.
+
+In future years, there are probably pretty straightforward ways to improve the total calculation time. If `BigNumber`'s divison is fairly cheap, I could see simply breaking the number up into N parts and doing a map-reduce style computation on the numbers. I'm sure there are way more clever ways though.
+
 ## 2020 - Chudnovsky algorithm
 
 [The code](https://github.com/pseudoramble/pi-day/blob/master/2020-chudnovsky.fs).
